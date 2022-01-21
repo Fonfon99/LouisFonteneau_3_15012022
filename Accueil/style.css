@@ -252,6 +252,7 @@ h1, h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-bottom: 50px;
 }
 
 .restaurants__card {
@@ -275,8 +276,6 @@ h1, h2 {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: bottom;
-     object-position: bottom;
 }
 
 .restaurants__card__body {

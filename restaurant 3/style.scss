@@ -1,0 +1,44 @@
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+
+@mixin Flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    font-family: "roboto";
+    margin: 0px;
+}
+h1 {
+    font-family: "shrikhand";
+}
+
+.header {
+    display: flex;
+    &__icone {
+        @include Flexcenter;
+        margin-left: 25px;
+    }
+    &__logo {
+        @include Flexcenter;
+        height: 65px;
+        padding-right: 7%;
+        > img {
+            max-width: 45%;
+        }
+    }
+}
+.restaurant-image {
+    height: 300px;
+    >img {
+        width: 100%;
+    }
+}
+
+.titre {
+    @include Flexcenter;
+    justify-content: space-around; 
+}
