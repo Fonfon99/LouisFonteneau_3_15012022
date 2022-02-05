@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <header>
         <div class="header">
             <div class="header__icone">
@@ -30,40 +31,64 @@
         <div class="titre">
             <div class="titre__nom"><h1>À la française</h1></div>
             <div class="titre__icone">
-                <i class="fa-regular fa-heart fa-xl"></i>
+                <i class="fa-regular fa-heart fa-2x"></i>
+            </div>
+            <div class="titre__icone--hover">
+                <i class="fas fa-heart fa-2x fa-gradient" ></i>
             </div>
         </div>
-        <div class="entrees">
-            <div class="entrees__titre">
-                <h2 class="entrees__titre-h2">ENTRÉES</h2>
+        <div class="plats">
+            <div class="plats__titre">
+                <h2 class="plats__titre-h2">ENTRÉES</h2>
                 <div class="underline"></div>
             </div>
-            <div class="entrees__menu">
-                <div class="entree-1">
-                    <div class="entree-1__detail">
+            <div class="plats__menu">
+                <div class="plat plat-1">
+                    <div class="plat__detail">
                         <h3>Tartare de poulpe acidulé</h3>
                         <p>Aux zestes d'orange</p>
                     </div>
-                    <div class="entree-1__prix">
-                        <div><b>25€</b></div>
+                    <div class="confirmation-block">
+                        <div class="plat__prix">
+                             <div><b>25€</b></div>
+                        </div>
+                        <div class="confirmation">
+                            <div class="confirmation-icone">
+                                <i class="fa-solid fa-circle-check fa-xl"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="entree-2">
-                    <div class="entree-2__detail">
+                <div class="plat plat-2">
+                    <div class="plat__detail">
                         <h3>Velouté de légumes d'antan</h3>
                         <p>Carotte, panais, topinambour</p>
                     </div>
-                    <div class="entree-2__prix">
-                        <div><b>35€</b></div>
+                    <div class="confirmation-block">
+                        <div class="plat__prix">
+                             <div><b>35€</b></div>
+                        </div>
+                        <div class="confirmation">
+                            <div class="confirmation-icone">
+                                <i class="fa-solid fa-circle-check fa-xl"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="entree-3">
-                    <div class="entree-3__detail">
+                <div class="plat plat-3">
+                    <div class="plat__detail">
                         <h3>Soupe à l'oignon</h3>
                         <p>Revisitée</p>
                     </div>
-                    <div class="entree-3__prix">
-                        <div><b>20€</b></div>
+                    <div class="confirmation-block">
+                        <div class="plat__prix">
+                             <div><b>20€</b></div>
+                        </div>
+                        <div class="confirmation">
+                            <div class="confirmation-icone">
+                                <i class="fa-solid fa-circle-check fa-xl"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -71,71 +96,113 @@
 
         <div class="plats">
             <div class="plats__titre">
-                <h2>PLATS</h2>
+                <h2 class="plats__titre-h2">PLATS</h2>
                 <div class="underline"></div>
             </div>
             <div class="plats__menu">
-                <div class="plats-1">
-                    <div class="plats-1__detail">
+                <div class="plat plat-1">
+                    <div class="plat__detail">
                         <h3>Coquilles Saint-Jacques</h3>
                         <p>Accompagnées d'une purée de panais</p>
                     </div>
-                    <div class="plats-1__prix">
-                        <div><b>40€</b></div>
+                    <div class="confirmation-block">
+                        <div class="plat__prix">
+                             <div><b>40€</b></div>
+                        </div>
+                        <div class="confirmation">
+                            <div class="confirmation-icone">
+                                <i class="fa-solid fa-circle-check fa-xl"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="plats-2">
-                    <div class="plats-2__detail">
+                <div class="plat plat-2">
+                    <div class="plat__detail">
                         <h3>Magret de canard</h3>
                         <p>Et parmentier de pommes de terre</p>
                     </div>
-                    <div class="plats-2__prix">
-                        <div><b>35€</b></div>
+                    <div class="confirmation-block">
+                        <div class="plat__prix">
+                             <div><b>35€</b></div>
+                        </div>
+                        <div class="confirmation">
+                            <div class="confirmation-icone">
+                                <i class="fa-solid fa-circle-check fa-xl"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="plats-3">
-                    <div class="plats-3__detail">
+                <div class="plat plat-3">
+                    <div class="plat__detail">
                         <h3>Pigeonneau d’Ille-et-Vilaine</h3>
                         <p>Sur son lit de gnocchis aux légumes</p>
                     </div>
-                    <div class="plats-3__prix">
-                        <div><b>44€</b></div>
+                    <div class="confirmation-block">
+                        <div class="plat__prix">
+                             <div><b>44€</b></div>
+                        </div>
+                        <div class="confirmation">
+                            <div class="confirmation-icone">
+                                <i class="fa-solid fa-circle-check fa-xl"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="desserts">
-            <div class="desserts__titre">
-                <h2>Desserts</h2>
+        <div class="plats">
+            <div class="plats__titre">
+                <h2 class="plats__titre-h2">DESSERTS</h2>
                 <div class="underline"></div>
             </div>
-            <div class="desserts__menu">
-                <div class="desserts-1">
-                    <div class="desserts-1__detail">
+            <div class="plats__menu">
+                <div class="plat plat-1">
+                    <div class="plat__detail">
                         <h3>Pétales de violettes glacés</h3>
                         <p>Et purée de noisettes</p>
                     </div>
-                    <div class="desserts-1__prix">
-                        <div><b>18€</b></div>
+                    <div class="confirmation-block">
+                        <div class="plat__prix">
+                             <div><b>18€</b></div>
+                        </div>
+                        <div class="confirmation">
+                            <div class="confirmation-icone">
+                                <i class="fa-solid fa-circle-check fa-xl"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="desserts-2">
-                    <div class="desserts-2__detail">
+                <div class="plat plat-2">
+                    <div class="plat__detail">
                         <h3>Fondant au chocolat</h3>
                         <p>Revisité</p>
                     </div>
-                    <div class="desserts-2__prix">
-                        <div><b>22€</b></div>
+                    <div class="confirmation-block">
+                        <div class="plat__prix">
+                             <div><b>22€</b></div>
+                        </div>
+                        <div class="confirmation">
+                            <div class="confirmation-icone">
+                                <i class="fa-solid fa-circle-check fa-xl"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="desserts-3">
-                    <div class="desserts-3__detail">
+                <div class="plat plat-3">
+                    <div class="plat__detail">
                         <h3>Millefeuille croustillant</h3>
                         <p>Myrtilles et pâte d’amande</p>
                     </div>
-                    <div class="desserts-3__prix">
-                        <div><b>23€</b></div>
+                    <div class="confirmation-block">
+                        <div class="plat__prix">
+                             <div><b>23€</b></div>
+                        </div>
+                        <div class="confirmation">
+                            <div class="confirmation-icone">
+                                <i class="fa-solid fa-circle-check fa-xl"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -152,10 +219,10 @@
         </div>
         <div class="footer__list">
             <ul>
-                <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
-                <li><i class="fa-solid fa-handshake-angle fa-sm"></i>Devenir partenaire</li>
-                <li>Mentions légales</li>
-                <li>Contact</li>
+               <a href="#"> <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li></a>
+               <a href="#"> <li><i class="fa-solid fa-handshake-angle fa-sm"></i>Devenir partenaire</li></a>
+               <a href="#"> <li>Mentions légales</li></a>
+               <a href="mailto:contact@ohmyfood.fr" target="_blank"><li>Contact</li></a>
             </ul>
         </div>
     </footer>

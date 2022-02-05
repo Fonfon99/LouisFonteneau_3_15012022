@@ -11,6 +11,56 @@ body {
     font-family: "roboto";
     margin: 0px;
 }
+
+.loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @include Flexcenter;
+    background-color: rgba($color: #797979, $alpha: 1);
+    animation: loading 3s linear forwards;
+}
+.loader-content {
+    height: 50px;
+    transform-origin: center;
+    animation: rotate 3s linear infinite;
+}
+.circle{
+    background-color: $primary-color;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: grow 1.5s linear infinite;
+    margin: -10px;
+}
+
+.circle:nth-child(2) {
+    background-color: $secondary-color;
+    animation-delay: 0.75s;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow {
+    50% {
+        transform: scale(1);
+    }
+}
+
+@keyframes loading {
+    90% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 h1, h2 {
     font-style: bold;
 }
@@ -67,7 +117,7 @@ h1, h2 {
     }
     &__btn {
        @include Flexcenter;
-       button{
+        >button {
            margin-top: 15px;
            height: 50px;
            min-width: 50%;
@@ -76,8 +126,14 @@ h1, h2 {
            box-shadow: 1px 5px 15px #a1a1a1;
            color: white;
            background-image: radial-gradient(ellipse at 0% 0%, $secondary-color,$primary-color);
-       }
+            &:hover {
+              box-shadow: 1px 5px 20px #797979;
+              filter: brightness(1.1);
+            }
+        }
+       
     }
+    
 }
 }
 
@@ -187,6 +243,7 @@ h1, h2 {
     }
     &__icone {
         @include Flexcenter;
+       
     }
 }
 footer {

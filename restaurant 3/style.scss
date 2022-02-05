@@ -1,31 +1,42 @@
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
-
+$button-color: radial-gradient(ellipse at 0% 0%, $secondary-color,$primary-color);
+ 
 @mixin Flexcenter {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+
 body{
+    max-width: 500px;
     font-family: "roboto";
     margin: 0px;
+    position: relative;
+    margin: auto;
 }
+
+
 h1 {
     font-family: "shrikhand";
 }
+h2 {
+    font-weight: lighter;
+    color: rgb(87, 87, 87);
+}
 
 .header {
-    display: flex;
+    @include Flexcenter;
     &__icone {
-        @include Flexcenter;
-        margin-left: 25px;
+        position: absolute;
+        top: 25px;
+        left: 25px;
     }
     &__logo {
         @include Flexcenter;
         height: 65px;
-        padding-right: 8%;
         > img {
             max-width: 55%;
         }
@@ -45,7 +56,7 @@ h1 {
 .restaurant-carte {
     border-radius: 45px 45px 0px 0px;
     margin-top: -35px;
-    background-color: rgb(233, 233, 233);
+    background-color: #f7f7f7;
 
  .titre {
     @include Flexcenter;
@@ -59,8 +70,31 @@ h1 {
             font-size: 30px;
         }
     }
+    &__icone {
+        position: absolute;
+        right: 35px;
+        top: 343px;
+        
+    }
+    &__icone--hover {
+        position: absolute;
+        right: 35px;
+        top: 343px;
+        opacity: 0;
+        transition: all 400ms;
+        &:hover {
+            background: -webkit-gradient(linear, left top, left bottom, from($secondary-color), to($primary-color));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border: none;
+            opacity: 1;
+        }   
+        
+    }
+    
 }
- .entrees {
+ .plats {
      
     margin-left: 15px;
     margin-right: 12px;
@@ -83,141 +117,71 @@ h1 {
         justify-content: space-between;
         
     }
-    .entree-1, .entree-2, .entree-3 {
+    .plat {
         @include Flexcenter;
+        height: 75px;
         opacity: 0;
         justify-content: space-between;
-        padding: 10px 20px 10px 10px;
+        padding: 0px 0px 0px 10px;
         background-color: white;
         border-radius: 15px;
         box-shadow: 0 0 10px #cecece;
+        overflow: hidden;
+        
+         &:hover .confirmation-block {
+           transform: translate(-70px);
+         }
+         &:hover i {
+            animation: rotate 600ms ease-out forwards ;
+            color: #fff;
+         }
+        
         &__detail {
             > h3, p {
                 margin: 5px 0px;
             }
         }
         &__prix { 
-            display: flex; 
-            > div {
-                margin-top: 30px;
+            align-self: flex-end;
+              > div {
+                  padding: 0 15px 15px 0;
+                  margin-left: 25px;
+                }  
             }
-                
-            }
+        .confirmation-block {
+            @include Flexcenter;
+            height: 100%;
+            margin-right: -70px;
+            transition: all 600ms ease-in-out;
+
+
+        .confirmation {
+            width: 70px;
+            height: 100%;
+            @include Flexcenter;
+            background-color: $tertiary-color;
+              > .confirmation-icone {
+                  display: flex;      
+                  > i {
+                      color: #fff;
+                   }
+                }
         }
+      }
     }
-    .entree-1 {
+}
+    .plat-1 {
         animation: apparition 0.8s 0.2s ease-out forwards;
     }
-    .entree-2 {
+    .plat-2 {
         animation: apparition 0.8s 0.4s ease-out forwards;
     }
-    .entree-3 {
+    .plat-3 {
         animation: apparition 0.8s 0.6s ease-out forwards;
     }
  }
+
  
- .plats{
-    margin-left: 15px;
-    margin-right: 12px;
-    &__titre {
-        > h2 {
-            margin-bottom: 10px;
-        }
-    }
-    .underline {
-        width: 60px;
-        height: 5px;
-        background-color: $tertiary-color;
-        margin-bottom: 20px;
-    }
-    &__menu {
-        height: 260px;
-        display: flex; 
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .plats-1, .plats-2, .plats-3 {
-        @include Flexcenter;
-        opacity: 0;
-        justify-content: space-between;
-        padding: 10px 20px 10px 10px;
-        background-color: white;
-        border-radius: 15px;
-        box-shadow: 0 0 10px #cecece;
-        &__detail {
-            > h3, p {
-                margin: 5px 0px;
-            }
-        }
-        &__prix { 
-            display: flex; 
-            > div {
-                margin-top: 30px;
-            }
-                
-            }
-        }
-        .plats-1 {
-            animation: apparition 0.8s 0.2s ease-out forwards;
-        }
-        .plats-2 {
-            animation: apparition 0.8s 0.4s ease-out forwards;
-        }
-        .plats-3 {
-            animation: apparition 0.8s 0.6s ease-out forwards;
-        }
- }
- .desserts{
-    margin-left: 15px;
-    margin-right: 12px;
-    &__titre {
-        > h2 {
-            margin-bottom: 10px;
-        }
-    }
-    .underline {
-        width: 60px;
-        height: 5px;
-        background-color: $tertiary-color;
-        margin-bottom: 20px;
-    }
-    &__menu {
-        height: 260px;
-        display: flex; 
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .desserts-1, .desserts-2, .desserts-3 {
-        @include Flexcenter;
-        opacity: 0;
-        justify-content: space-between;
-        padding: 10px 20px 10px 10px;
-        background-color: white;
-        border-radius: 15px;
-        box-shadow: 0 0 10px #cecece;
-        &__detail {
-            > h3, p {
-                margin: 5px 0px;
-            }
-        }
-        &__prix { 
-            display: flex; 
-            > div {
-                margin-top: 30px;
-            }
-                
-            }
-        }
-        .desserts-1 {
-            animation: apparition 0.8s 0.2s ease-out forwards;
-        }
-        .desserts-2 {
-            animation: apparition 0.8s 0.4s ease-out forwards;
-        }
-        .desserts-3 {
-            animation: apparition 0.8s 0.6s ease-out forwards;
-        }
- }
  .commande {
     @include Flexcenter;
     height: 200px;
@@ -231,9 +195,15 @@ h1 {
          box-shadow: 1px 5px 15px #a1a1a1;
          color: white;
          border: 0;
-         background-image: radial-gradient(ellipse at 0% 0%, $secondary-color,$primary-color);
+         background: $button-color;
          font-size: 18px;
+         transition: all 400ms;
+         &:hover {
+            box-shadow: 1px 5px 20px #797979;
+            filter: brightness(1.1);
+        }
      }
+    
     }
   }
 
@@ -256,15 +226,21 @@ footer {
         list-style: none;
         padding: 0 0 30px 25px;
         margin:0;
+        > a {
+            text-decoration: none;
+            color: white;
+        
         > li {
             margin-top: 5px;
 
         
-         i {
+          i {
             margin-right: 15px;
            
             }
         }
+    }
+        
     }
  } 
  @keyframes apparition {
@@ -272,4 +248,10 @@ footer {
          opacity: 1;
          transform: none;
      }
+ }
+
+ @keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
  }
