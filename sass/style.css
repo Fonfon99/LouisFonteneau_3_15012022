@@ -60,6 +60,8 @@ h2 {
   position: relative;
   right: 20px;
   z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .restaurant-carte {
@@ -68,7 +70,7 @@ h2 {
   background-color: #f7f7f7;
 }
 
-.restaurant-carte .titre {
+.titre {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,21 +88,21 @@ h2 {
   margin-right: 30px;
 }
 
-.restaurant-carte .titre__nom {
+.titre__nom {
   width: 250px;
 }
 
-.restaurant-carte .titre__nom > h1 {
+.titre__nom > h1 {
   font-size: 30px;
 }
 
-.restaurant-carte .titre__icone {
+.icone {
   position: absolute;
   right: 35px;
   top: 343px;
 }
 
-.restaurant-carte .titre__icone--hover {
+.icone--hover {
   position: absolute;
   right: 35px;
   top: 343px;
@@ -109,7 +111,7 @@ h2 {
   transition: all 400ms;
 }
 
-.restaurant-carte .titre__icone--hover:hover {
+.icone--hover:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background-clip: text;
   -webkit-background-clip: text;
@@ -118,24 +120,23 @@ h2 {
   opacity: 1;
 }
 
-.restaurant-carte .plats {
-  margin-left: 15px;
-  margin-right: 12px;
+.plats {
+  width: 90%;
+  margin: auto;
 }
 
-.restaurant-carte .plats__titre > h2 {
+.plats__titre > h2 {
   margin-bottom: 10px;
 }
 
-.restaurant-carte .plats .underline {
+.plats .underline {
   width: 60px;
   height: 5px;
   background-color: #99E2D0;
   margin-bottom: 20px;
 }
 
-.restaurant-carte .plats__menu {
-  height: 260px;
+.plats__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -143,12 +144,9 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-.restaurant-carte .plats .plat {
+.plat {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,43 +158,53 @@ h2 {
           align-items: center;
   height: 75px;
   opacity: 0;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 0px 0px 0px 10px;
   background-color: white;
   border-radius: 15px;
   -webkit-box-shadow: 0 0 10px #cecece;
           box-shadow: 0 0 10px #cecece;
   overflow: hidden;
+  white-space: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-.restaurant-carte .plats .plat:hover .confirmation-block {
+.plat:hover .confirmation-block {
   -webkit-transform: translate(-70px);
           transform: translate(-70px);
 }
 
-.restaurant-carte .plats .plat:hover i {
+.plat:hover i {
   -webkit-animation: rotate 600ms ease-out forwards;
           animation: rotate 600ms ease-out forwards;
   color: #fff;
 }
 
-.restaurant-carte .plats .plat__detail > h3, .restaurant-carte .plats .plat__detail p {
-  margin: 5px 0px;
+.plat__detail {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-.restaurant-carte .plats .plat__prix {
+.plat__detail > h3, .plat__detail p {
+  margin: 5px 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.plat__prix {
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
 
-.restaurant-carte .plats .plat__prix > div {
+.plat__prix > div {
   padding: 0 15px 15px 0;
   margin-left: 25px;
 }
 
-.restaurant-carte .plats .plat .confirmation-block {
+.confirmation-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -212,7 +220,7 @@ h2 {
   transition: all 600ms ease-in-out;
 }
 
-.restaurant-carte .plats .plat .confirmation-block .confirmation {
+.confirmation {
   width: 70px;
   height: 100%;
   display: -webkit-box;
@@ -227,29 +235,34 @@ h2 {
   background-color: #99E2D0;
 }
 
-.restaurant-carte .plats .plat .confirmation-block .confirmation > .confirmation-icone {
+.confirmation > .confirmation-icone {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.restaurant-carte .plats .plat .confirmation-block .confirmation > .confirmation-icone > i {
+.confirmation > .confirmation-icone > i {
   color: #fff;
 }
 
-.restaurant-carte .plat-1 {
+.plat-1 {
   -webkit-animation: apparition 0.8s 0.2s ease-out forwards;
           animation: apparition 0.8s 0.2s ease-out forwards;
 }
 
-.restaurant-carte .plat-2 {
+.plat-2 {
   -webkit-animation: apparition 0.8s 0.4s ease-out forwards;
           animation: apparition 0.8s 0.4s ease-out forwards;
 }
 
-.restaurant-carte .plat-3 {
+.plat-3 {
   -webkit-animation: apparition 0.8s 0.6s ease-out forwards;
           animation: apparition 0.8s 0.6s ease-out forwards;
+}
+
+.plat-4 {
+  -webkit-animation: apparition 0.8s 0.8s ease-out forwards;
+          animation: apparition 0.8s 0.8s ease-out forwards;
 }
 
 .commande {
@@ -266,13 +279,15 @@ h2 {
   width: 100%;
 }
 
-.commande .btn-commander {
-  width: 50%;
-}
-
-.commande .btn-commander > button {
-  width: 100%;
-  height: 60px;
+.btn-commander {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 20px 0 20px;
+  height: 50px;
   border-radius: 45px;
   -webkit-box-shadow: 1px 5px 15px #a1a1a1;
           box-shadow: 1px 5px 15px #a1a1a1;
@@ -282,9 +297,10 @@ h2 {
   font-size: 18px;
   -webkit-transition: all 400ms;
   transition: all 400ms;
+  cursor: pointer;
 }
 
-.commande .btn-commander > button:hover {
+.btn-commander:hover {
   -webkit-box-shadow: 1px 5px 20px #797979;
           box-shadow: 1px 5px 20px #797979;
   -webkit-filter: brightness(1.1);
@@ -296,13 +312,13 @@ footer {
   height: 100%;
 }
 
-footer .footer__logo {
+.footer__logo {
   margin-left: 25px;
   width: 150px;
   padding: 25px 0 15px 0;
 }
 
-footer .footer__logo > img {
+.footer__logo > img {
   width: 100px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -310,23 +326,23 @@ footer .footer__logo > img {
           filter: brightness(100);
 }
 
-footer .footer__list > ul {
+.footer__list > ul {
   color: white;
   list-style: none;
   padding: 0 0 30px 25px;
   margin: 0;
 }
 
-footer .footer__list > ul > a {
+.footer__list > ul > a {
   text-decoration: none;
   color: white;
 }
 
-footer .footer__list > ul > a > li {
+.footer__list > ul > a > li {
   margin-top: 5px;
 }
 
-footer .footer__list > ul > a > li i {
+.footer__list > ul > a > li i {
   margin-right: 15px;
 }
 
