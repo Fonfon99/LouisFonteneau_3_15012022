@@ -1,0 +1,12 @@
+.restaurant-image {
+    height: 280px;
+    overflow: hidden;
+
+    >img {
+        width: 110%;
+        position: relative;
+        right: 20px;
+        z-index: -1;
+        object-fit: cover;
+    }
+}

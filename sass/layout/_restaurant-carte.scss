@@ -1,0 +1,127 @@
+.restaurant-carte {
+    border-radius: 45px 45px 0px 0px;
+    margin-top: -35px;
+    background-color: #f7f7f7;
+}
+
+.titre {
+    @include Flexcenter;
+    justify-content: space-between; 
+    padding-top: 5px;
+    margin-left: 25px;
+    margin-right: 30px;
+
+    &__nom {
+        width: 250px;
+
+        > h1 {
+            font-size: 30px;
+        }
+    }
+}
+
+
+
+.plats {
+    width: 90%;
+    margin: auto;
+
+    &__titre {
+
+        > h2 {
+            margin-bottom: 10px;
+        }
+    }
+    .underline {
+        width: 60px;
+        height: 5px;
+        background-color: $tertiary-color;
+        margin-bottom: 20px;
+    }
+        
+    &__menu {
+        display: flex; 
+        flex-direction: column;
+    }
+}
+    
+.plat {
+    @include Flexcenter; 
+    height: 75px;
+    opacity: 0;
+    padding: 0px 0px 0px 10px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #cecece;
+    overflow: hidden;
+    white-space: nowrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  
+    &:hover .confirmation-block {
+      transform: translate(-70px);
+    }
+
+    &:hover i {
+      animation: rotate 600ms ease-out forwards ;
+      color: #fff;
+    }
+        
+    &__detail {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+       > h3, p {
+               margin: 5px 0px;
+               overflow: hidden;
+               text-overflow: ellipsis;
+            }
+        }
+    &__prix { 
+      align-self: flex-end;
+
+         > div {
+          padding: 0 15px 15px 0;
+          margin-left: 25px;
+            }  
+    }
+}
+
+
+
+.plat-1 {
+    animation: apparition 0.8s 0.2s ease-out forwards;
+}
+
+.plat-2 {
+    animation: apparition 0.8s 0.4s ease-out forwards;
+}
+
+.plat-3 {
+    animation: apparition 0.8s 0.6s ease-out forwards;
+}
+
+.plat-4 {
+    animation: apparition 0.8s 0.8s ease-out forwards;
+}
+
+.commande {
+    @include Flexcenter;
+    height: 200px;
+    width: 100%;
+    
+}
+
+@keyframes apparition {
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes rotate {
+   100% {
+       transform: rotate(360deg);
+   }
+}

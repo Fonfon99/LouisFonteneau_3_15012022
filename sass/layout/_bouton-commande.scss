@@ -1,0 +1,20 @@
+.btn-commander {
+    align-self: center;
+    width: fit-content;
+    padding: 0 20px 0 20px;
+    height: 50px;
+    border-radius: 45px;
+    box-shadow: 1px 5px 15px #a1a1a1;
+    color: white;
+    border: 0;
+    background: $button-color;
+    font-size: 18px;
+    transition: all 400ms;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 1px 5px 20px #797979;
+        filter: brightness(1.1);
+        
+    }  
+}

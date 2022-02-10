@@ -1,5 +1,5 @@
 body {
-  max-width: 500px;
+  max-width: 480px;
   font-family: "roboto";
   margin: 0px;
   position: relative;
@@ -15,6 +15,12 @@ h2 {
   color: #575757;
 }
 
+@media (min-width: 480px) {
+  html {
+    background-color: rgba(36, 35, 35, 0.568);
+  }
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25,6 +31,7 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #fff;
 }
 
 .header__icone {
@@ -94,30 +101,6 @@ h2 {
 
 .titre__nom > h1 {
   font-size: 30px;
-}
-
-.icone {
-  position: absolute;
-  right: 35px;
-  top: 343px;
-}
-
-.icone--hover {
-  position: absolute;
-  right: 35px;
-  top: 343px;
-  opacity: 0;
-  -webkit-transition: all 400ms;
-  transition: all 400ms;
-}
-
-.icone--hover:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  border: none;
-  opacity: 1;
 }
 
 .plats {
@@ -204,47 +187,6 @@ h2 {
   margin-left: 25px;
 }
 
-.confirmation-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-  margin-right: -70px;
-  -webkit-transition: all 600ms ease-in-out;
-  transition: all 600ms ease-in-out;
-}
-
-.confirmation {
-  width: 70px;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #99E2D0;
-}
-
-.confirmation > .confirmation-icone {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.confirmation > .confirmation-icone > i {
-  color: #fff;
-}
-
 .plat-1 {
   -webkit-animation: apparition 0.8s 0.2s ease-out forwards;
           animation: apparition 0.8s 0.2s ease-out forwards;
@@ -277,6 +219,36 @@ h2 {
           align-items: center;
   height: 200px;
   width: 100%;
+}
+
+@-webkit-keyframes apparition {
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes apparition {
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .btn-commander {
@@ -346,33 +318,68 @@ footer {
   margin-right: 15px;
 }
 
-@-webkit-keyframes apparition {
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
-  }
+.icone {
+  position: absolute;
+  right: 35px;
+  top: 343px;
 }
 
-@keyframes apparition {
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
-  }
+.icone--hover {
+  position: absolute;
+  right: 35px;
+  top: 343px;
+  opacity: 0;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
 }
 
-@-webkit-keyframes rotate {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+.icone--hover:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: none;
+  opacity: 1;
 }
 
-@keyframes rotate {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+.confirmation-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  margin-right: -70px;
+  -webkit-transition: all 600ms ease-in-out;
+  transition: all 600ms ease-in-out;
+}
+
+.confirmation {
+  width: 70px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #99E2D0;
+}
+
+.confirmation > .confirmation-icone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.confirmation > .confirmation-icone > i {
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

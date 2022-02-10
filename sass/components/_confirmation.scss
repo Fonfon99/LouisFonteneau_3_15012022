@@ -1,0 +1,21 @@
+.confirmation-block {
+    @include Flexcenter;
+    height: 100%;
+    margin-right: -70px;
+    transition: all 600ms ease-in-out;
+}
+
+.confirmation {
+    width: 70px;
+    height: 100%;
+    @include Flexcenter;
+    background-color: $tertiary-color;
+
+    > .confirmation-icone {
+        display: flex;    
+
+        > i {
+         color: #fff;
+        }
+    }
+}

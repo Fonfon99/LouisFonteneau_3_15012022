@@ -1,0 +1,36 @@
+footer {
+    background-color: rgba(37, 37, 37, 0.87);
+    height: 100%;
+}
+
+.footer__logo {
+    margin-left: 25px;
+    width: 150px;
+    padding: 25px 0 15px 0;
+
+    > img {
+        width: 100px;
+         object-fit: cover;
+        filter: brightness(100);
+    }
+}
+
+.footer__list > ul {
+    color: white;
+    list-style: none;
+    padding: 0 0 30px 25px;
+    margin:0;
+
+    > a {
+            text-decoration: none;
+            color: white;
+        
+        > li {
+            margin-top: 5px;
+
+            i {
+                margin-right: 15px;
+            }
+        }
+    }       
+}

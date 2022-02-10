@@ -1,12 +1,17 @@
+
 body {
+  max-width: 480px;
   font-family: "roboto";
-  margin: 0px;
+  margin:0px;
+  margin: auto;
 }
 
 .loader {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
+  left: 0;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,6 +100,10 @@ body {
 
 h1, h2 {
   font-style: bold;
+}
+
+header {
+  background-color: #fff;
 }
 
 .header-image {
@@ -224,6 +233,7 @@ h1, h2 {
 }
 
 .fonctionnement {
+  background-color: #fff;
   padding: 20px 0 60px 0;
   height: 50%;
 }
@@ -474,5 +484,11 @@ footer {
 
 .footer__list > ul > a > li i {
   margin-right: 15px;
+}
+
+@media (min-width: 480px) {
+  html {
+    background-color: rgba(36, 35, 35, 0.568);
+  }
 }
 /*# sourceMappingURL=main.css.map */

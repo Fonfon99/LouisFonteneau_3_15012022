@@ -1,0 +1,19 @@
+.header {
+    @include Flexcenter;
+    background-color: #fff;
+
+    &__icone {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+
+    &__logo {
+        @include Flexcenter;
+        height: 65px;
+
+        > img {
+            max-width: 55%;
+        }
+    }
+}
