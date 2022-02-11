@@ -155,8 +155,7 @@ h2 {
 }
 
 .plat:hover .confirmation-block {
-  -webkit-transform: translate(-70px);
-          transform: translate(-70px);
+  margin: 0;
 }
 
 .plat:hover i {
