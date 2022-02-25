@@ -86,6 +86,7 @@ body {
   }
   100% {
     opacity: 0;
+    z-index: -1;
   }
 }
 
@@ -95,6 +96,7 @@ body {
   }
   100% {
     opacity: 0;
+    z-index: -1;
   }
 }
 
@@ -121,8 +123,9 @@ header {
           box-shadow: 5px 0px 10px #a1a1a1;
 }
 
-.header-image > img {
-  max-width: 45%;
+.header-image > h1 {
+  font-family: "shrikhand" ;
+  font-size: xx-large;
 }
 
 .localisation {
@@ -180,9 +183,12 @@ header {
   text-align: center;
 }
 
-.presentation__titre h1 {
-  width: 60%;
+.presentation__titre {
   margin: 40px 0 0 0;
+}
+
+.presentation__titre > b {
+  font-size: large;
 }
 
 .presentation__details {
@@ -475,16 +481,16 @@ footer {
   margin: 0;
 }
 
-.footer__list > ul > a {
+.footer__list > ul > li > a {
   text-decoration: none;
   color: white;
 }
 
-.footer__list > ul > a > li {
+.footer__list > ul > li {
   margin-top: 5px;
 }
 
-.footer__list > ul > a > li i {
+.footer__list > ul > li i {
   margin-right: 15px;
 }
 
