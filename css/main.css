@@ -184,10 +184,10 @@ header {
 }
 
 .presentation__titre {
-  margin: 40px 0 0 0;
+  margin: 20px 0 0 0;
 }
 
-.presentation__titre > b {
+.presentation__titre > h2 {
   font-size: large;
 }
 
